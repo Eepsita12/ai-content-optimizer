@@ -310,6 +310,8 @@ npm run dev
 ```
 
 ### Batch Jobs (Run Manually)
+These scripts must be run manually to populate and optimize articles
+before viewing results in the frontend.
 
 ```bash
 # Scrape articles
@@ -318,6 +320,8 @@ node backend/beyondchats-scraper/scrape.js
 # Optimize articles using AI
 node backend/phase2/saveOptimizedArticle.js
 ```
+Note: Ensure the backend server and MongoDB connection are running
+before executing these scripts.
 
 ---
 
@@ -354,5 +358,6 @@ VITE_API_BASE_URL=https://ai-content-optimizer-backend-wi9e.onrender.com
 
 
 ## Thank You
+
 
 
