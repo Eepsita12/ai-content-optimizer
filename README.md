@@ -44,6 +44,13 @@ https://github.com/Eepsita12/ai-content-optimizer
 
 https://ai-content-optimizer-ui.vercel.app
 
+> Note on Live Demo:
+> The deployed frontend may initially display an empty article list if the database
+> is empty. Articles are populated by running the scraping and optimization scripts,
+> which are intentionally kept as manual system operations to maintain control over
+> scraping frequency and AI usage.
+
+
 ### Backend API (Render)
 
 https://ai-content-optimizer-backend-wi9e.onrender.com
@@ -363,6 +370,7 @@ VITE_API_BASE_URL=https://ai-content-optimizer-backend-wi9e.onrender.com
 
 
 ## Thank You
+
 
 
 
