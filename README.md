@@ -332,8 +332,12 @@ node backend/beyondchats-scraper/scrape.js
 # Optimize articles using AI
 node backend/phase2/saveOptimizedArticle.js
 ```
-Note: Ensure the backend server and MongoDB connection are running
-before executing these scripts.
+> Note: Ensure the backend server and MongoDB connection are running
+> before executing these scripts.  
+> The AI optimization script processes **one unoptimized article per run**.
+> To optimize all articles, run `node backend/phase2/saveOptimizedArticle.js`
+> multiple times until no unoptimized articles remain in the database.
+
 
 ---
 
@@ -370,6 +374,7 @@ VITE_API_BASE_URL=https://ai-content-optimizer-backend-wi9e.onrender.com
 
 
 ## Thank You
+
 
 
 
