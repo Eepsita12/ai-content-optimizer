@@ -257,6 +257,11 @@ SerpAPI was adopted because it:
 
 Mercury Parser experimentation is retained **for reference only**.
 
+> Note: Due to widespread bot protection on modern blogs, the final implementation
+> does not scrape full HTML content of competitor articles. Instead, Google Search
+> snippets fetched via SerpAPI are used as competitor context, which reflects how
+> real-world SEO analysis tools operate.
+
 ---
 
 ## Database Schema (Article)
@@ -358,6 +363,7 @@ VITE_API_BASE_URL=https://ai-content-optimizer-backend-wi9e.onrender.com
 
 
 ## Thank You
+
 
 
 
