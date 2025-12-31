@@ -1,50 +1,26 @@
+/**
+ * EXPERIMENTAL FILE – NOT USED IN FINAL PIPELINE
+ *
+ * This file was created to experiment with the Postlight Mercury Parser
+ * for extracting full article content from competitor websites.
+ *
+ * During testing, it was observed that many high-ranking blog platforms
+ * (e.g., Medium, Cloudflare-protected sites) actively block Mercury Parser
+ * and direct HTML scraping, resulting in unreliable or empty extractions.
+ *
+ * Due to these real-world scraping limitations, this approach was
+ * abandoned in favor of a more reliable solution using SerpAPI
+ * (Google Search API) to fetch competitor article snippets instead.
+ *
+ * SerpAPI-based snippets provide stable, Google-indexed summaries of
+ * competitor content and are used in the final AI optimization pipeline.
+ *
+ * This file is intentionally retained for reference and learning purposes.
+ * It is not executed as part of the production workflow.
+ */
+
+
 const { parse } = require("@postlight/mercury-parser");
-
-
-// async function scrapeArticle(url) {
-//     try {
-//         const response = await axios.get(url, {
-//             headers: {
-//                 "User-Agent":
-//                     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-//                 "Accept-Language": "en-US,en;q=0.9"
-//             }
-//         });
-
-//         const $ = cheerio.load(response.data)
-
-//         let content = ""
-
-//         $("p,h1,h2,h3").each((i, element) => {
-//             const text = $(element).text().trim()
-//             if (text.length > 50) {
-//                 content += text + "\n\n"
-//             }
-//         })
-
-//         return {
-//             url,
-//             content
-//         }
-//     } catch (error) {
-//         console.error("Error scraping competitor:", url);
-//         return null;
-//     }
-// }
-
-// (async () => {
-//     const testUrl =
-//         "https://chatbotsmagazine.com/the-complete-beginner-s-guide-to-chatbots-8280b7b906ca";
-
-//     const scraped = await scrapeArticle(testUrl);
-
-//     if (!scraped || !scraped.content) {
-//         console.log("❌ Scraping failed");
-//         return;
-//     }
-
-//     console.log("✅ Scraped length:", scraped.content.length);
-// })();
 
 async function scrapeArticle(url) {
     try{
